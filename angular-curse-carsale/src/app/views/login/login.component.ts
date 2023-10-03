@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit{
   public doLogin(): void {
     this.loginService.doLogin(this.requestLogin).subscribe(
       (data)=>{
-        this.router.navigate(['dashboard'])
+        this.router.navigate(['multiselect-autocomplete-exemple'])
       },(Httperror)=>{
         this.alertService.error(Httperror.error.message)
         console.log(Httperror)

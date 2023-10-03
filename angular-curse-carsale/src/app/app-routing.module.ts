@@ -5,8 +5,8 @@ import { AuthGuardService } from './resources/services/auth-guard.service';
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
-  {path:'dashboard',canActivate: [AuthGuardService], loadChildren: () =>
-  import("./views/dashboard/dashboard.module").then(m => m.DashboardModule)},
+  {path:'multiselect-autocomplete-exemple',canActivate: [AuthGuardService], loadChildren: () =>
+  import("./views/multiselect-autocomplete-example/multiselect-autocomplete-exemple.module").then(m => m.MultiselectAutocompleteExampleModule)},
   {path: '**', redirectTo: ''}
 ];
 
